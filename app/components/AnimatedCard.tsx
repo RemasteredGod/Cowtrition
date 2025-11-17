@@ -9,7 +9,11 @@ interface AnimatedCardProps {
   className?: string;
 }
 
-export default function AnimatedCard({ children, delay = 0, className = '' }: AnimatedCardProps) {
+export default function AnimatedCard({
+  children,
+  delay = 0,
+  className = '',
+}: AnimatedCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}

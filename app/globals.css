@@ -1,21 +1,21 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   /* Cowtrition Color Palette - Earthy Organic Theme */
-  --background: #FFF7E9;
-  --foreground: #2F4F2F;
-  --forest-green: #2F4F2F;
-  --cow-brown: #7A5C33;
-  --grass-green: #4D7C0F;
-  --soft-beige: #FFF7E9;
-  --saffron: #D97706;
-  
+  --background: #fff7e9;
+  --foreground: #2f4f2f;
+  --forest-green: #2f4f2f;
+  --cow-brown: #7a5c33;
+  --grass-green: #4d7c0f;
+  --soft-beige: #fff7e9;
+  --saffron: #d97706;
+
   /* Extended palette for UI elements */
-  --forest-green-light: #3D6B3D;
-  --forest-green-dark: #1F3A1F;
-  --grass-green-light: #65A30D;
-  --saffron-light: #F59E0B;
-  --saffron-dark: #B45309;
+  --forest-green-light: #3d6b3d;
+  --forest-green-dark: #1f3a1f;
+  --grass-green-light: #65a30d;
+  --saffron-light: #f59e0b;
+  --saffron-dark: #b45309;
 }
 
 @theme inline {

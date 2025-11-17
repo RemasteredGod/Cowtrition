@@ -11,7 +11,12 @@ interface SectionProps {
   background?: 'beige' | 'white' | 'green';
 }
 
-export default function Section({ children, id, className = '', background = 'beige' }: SectionProps) {
+export default function Section({
+  children,
+  id,
+  className = '',
+  background = 'beige',
+}: SectionProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,

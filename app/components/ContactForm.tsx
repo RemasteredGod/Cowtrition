@@ -16,11 +16,11 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Placeholder for form submission
     // You can integrate with your preferred email service or API route
     console.log('Form submitted:', formData);
-    
+
     setTimeout(() => {
       alert('Thank you for reaching out! We will get back to you soon.');
       setFormData({ name: '', email: '', phone: '', message: '' });
@@ -28,17 +28,22 @@ export default function ContactForm() {
     }, 1000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-[#2F4F2F] mb-2">
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-[#2F4F2F] mb-2"
+        >
           Full Name *
         </label>
         <input
@@ -54,7 +59,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-[#2F4F2F] mb-2">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-[#2F4F2F] mb-2"
+        >
           Email Address *
         </label>
         <input
@@ -70,7 +78,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-[#2F4F2F] mb-2">
+        <label
+          htmlFor="phone"
+          className="block text-sm font-medium text-[#2F4F2F] mb-2"
+        >
           Phone Number
         </label>
         <input
@@ -85,7 +96,10 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#2F4F2F] mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-[#2F4F2F] mb-2"
+        >
           Message *
         </label>
         <textarea
@@ -100,7 +114,13 @@ export default function ContactForm() {
         />
       </div>
 
-      <Button type="submit" variant="primary" size="lg" disabled={isSubmitting} className="w-full">
+      <Button
+        type="submit"
+        variant="primary"
+        size="lg"
+        disabled={isSubmitting}
+        className="w-full"
+      >
         {isSubmitting ? 'Sending...' : 'Send Message'}
         <Send size={20} />
       </Button>

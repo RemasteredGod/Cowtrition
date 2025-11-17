@@ -7,11 +7,11 @@ interface ImagePlaceholderProps {
   aspectRatio?: 'square' | 'video' | 'portrait' | 'wide';
 }
 
-export default function ImagePlaceholder({ 
-  src = '/placeholder.jpg', 
-  alt, 
+export default function ImagePlaceholder({
+  src = '/placeholder.jpg',
+  alt,
   className = '',
-  aspectRatio = 'video'
+  aspectRatio = 'video',
 }: ImagePlaceholderProps) {
   const aspectClasses = {
     square: 'aspect-square',
@@ -21,7 +21,9 @@ export default function ImagePlaceholder({
   };
 
   return (
-    <div className={`relative ${aspectClasses[aspectRatio]} ${className} bg-linear-to-br from-[#4D7C0F]/20 to-[#7A5C33]/20 rounded-2xl overflow-hidden`}>
+    <div
+      className={`relative ${aspectClasses[aspectRatio]} ${className} bg-linear-to-br from-[#4D7C0F]/20 to-[#7A5C33]/20 rounded-2xl overflow-hidden`}
+    >
       {src && src !== '/placeholder.jpg' ? (
         <Image
           src={src}
@@ -35,7 +37,9 @@ export default function ImagePlaceholder({
           <div className="text-center p-8">
             <div className="text-6xl mb-4">🐄</div>
             <p className="text-[#2F4F2F]/60 font-medium">{alt}</p>
-            <p className="text-[#2F4F2F]/40 text-sm mt-2">Replace with actual image</p>
+            <p className="text-[#2F4F2F]/40 text-sm mt-2">
+              Replace with actual image
+            </p>
           </div>
         </div>
       )}
