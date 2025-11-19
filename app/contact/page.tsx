@@ -92,7 +92,9 @@ export default function ContactPage() {
                     <br />
                     India 123456
                     <br />
-                    <span className="font-semibold text-[#2F4F2F] mt-2 inline-block">Employees: 10-12</span>
+                    <span className="font-semibold text-[#2F4F2F] mt-2 inline-block">
+                      Employees: 10-12
+                    </span>
                   </p>
                 </div>
               </div>
