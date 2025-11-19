@@ -41,7 +41,11 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
                 className="flex justify-center lg:justify-start"
               >
                 <div className="relative">
@@ -122,20 +126,28 @@ export default function Home() {
                 className="grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 pt-4"
               >
                 <div className="text-center lg:text-left bg-white/50 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="text-4xl font-bold text-[#D97706] mb-1">500+</div>
+                  <div className="text-4xl font-bold text-[#D97706] mb-1">
+                    500+
+                  </div>
                   <div className="text-sm font-medium text-[#2F4F2F]/70">
                     Cows Protected
                   </div>
                 </div>
                 <div className="text-center lg:text-left bg-white/50 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="text-4xl font-bold text-[#4D7C0F] mb-1">150+</div>
+                  <div className="text-4xl font-bold text-[#4D7C0F] mb-1">
+                    150+
+                  </div>
                   <div className="text-sm font-medium text-[#2F4F2F]/70">
                     Farmers Helped
                   </div>
                 </div>
                 <div className="text-center lg:text-left bg-white/50 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
-                  <div className="text-4xl font-bold text-[#7A5C33] mb-1">25+</div>
-                  <div className="text-sm font-medium text-[#2F4F2F]/70">Villages</div>
+                  <div className="text-4xl font-bold text-[#7A5C33] mb-1">
+                    25+
+                  </div>
+                  <div className="text-sm font-medium text-[#2F4F2F]/70">
+                    Villages
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -295,11 +307,7 @@ export default function Home() {
                 Donate Now
                 <Heart size={20} />
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                href="/contact"
-              >
+              <Button variant="outline" size="lg" href="/contact">
                 Get Involved
                 <ArrowRight size={20} />
               </Button>
