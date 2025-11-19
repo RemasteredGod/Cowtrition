@@ -29,46 +29,65 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl z-10 py-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-10rem)]">
+          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-10rem)]">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="text-center lg:text-left"
+              className="text-center lg:text-left space-y-8"
             >
-              {/* Logo */}
+              {/* Large Prominent Logo */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="mb-8 flex justify-center lg:justify-start"
+                transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="flex justify-center lg:justify-start"
               >
-                <Image
-                  src="/images/logo/logo.png"
-                  alt="Cowtrition Foundation Logo"
-                  width={400}
-                  height={120}
-                  priority
-                  className="w-auto h-20 md:h-24 drop-shadow-xl"
-                />
+                <div className="relative">
+                  <Image
+                    src="/images/logo/logo.png"
+                    alt="Cowtrition Foundation Logo"
+                    width={600}
+                    height={180}
+                    priority
+                    className="w-auto h-32 md:h-40 lg:h-44 drop-shadow-2xl"
+                  />
+                  {/* Subtle glow effect behind logo */}
+                  <div className="absolute inset-0 bg-[#D97706]/10 blur-3xl -z-10 scale-110" />
+                </div>
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2F4F2F] mb-6 leading-tight"
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2F4F2F] leading-tight"
               >
                 Nourishing Rural India,{' '}
-                <span className="text-[#D97706]">One Cow at a Time</span>
+                <span className="text-[#D97706] relative inline-block">
+                  One Cow at a Time
+                  <svg
+                    className="absolute -bottom-2 left-0 w-full h-3 text-[#D97706]/30"
+                    viewBox="0 0 300 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 6C50 2 100 10 150 6C200 2 250 10 298 6"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg md:text-xl text-[#2F4F2F]/80 mb-8 leading-relaxed"
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="text-lg md:text-xl text-[#2F4F2F]/80 leading-relaxed max-w-xl mx-auto lg:mx-0"
               >
                 Preserving indigenous cow breeds, empowering farmers, and
                 reviving traditional sustainable agriculture rooted in Indian
@@ -78,8 +97,8 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12"
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               >
                 <Button
                   variant="primary"
@@ -99,24 +118,24 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                className="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0"
+                transition={{ duration: 0.6, delay: 1.1 }}
+                className="grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 pt-4"
               >
-                <div className="text-center lg:text-left">
-                  <div className="text-3xl font-bold text-[#D97706]">500+</div>
-                  <div className="text-sm text-[#2F4F2F]/70">
+                <div className="text-center lg:text-left bg-white/50 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-4xl font-bold text-[#D97706] mb-1">500+</div>
+                  <div className="text-sm font-medium text-[#2F4F2F]/70">
                     Cows Protected
                   </div>
                 </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-3xl font-bold text-[#4D7C0F]">150+</div>
-                  <div className="text-sm text-[#2F4F2F]/70">
+                <div className="text-center lg:text-left bg-white/50 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-4xl font-bold text-[#4D7C0F] mb-1">150+</div>
+                  <div className="text-sm font-medium text-[#2F4F2F]/70">
                     Farmers Helped
                   </div>
                 </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-3xl font-bold text-[#7A5C33]">25+</div>
-                  <div className="text-sm text-[#2F4F2F]/70">Villages</div>
+                <div className="text-center lg:text-left bg-white/50 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-4xl font-bold text-[#7A5C33] mb-1">25+</div>
+                  <div className="text-sm font-medium text-[#2F4F2F]/70">Villages</div>
                 </div>
               </motion.div>
             </motion.div>
@@ -246,10 +265,10 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-linear-to-br from-[#2F4F2F] to-[#4D7C0F] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+      <section className="py-20 bg-linear-to-br from-[#FFF7E9] via-[#4D7C0F]/10 to-[#FFF7E9] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#D97706] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#4D7C0F] rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10">
@@ -260,16 +279,16 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2F4F2F] mb-6">
               Join Us in Making a Difference
             </h2>
-            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-[#2F4F2F]/80 mb-10 leading-relaxed">
               Your support helps preserve India&apos;s sacred cows, empower
               rural communities, and build a sustainable future for agriculture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                variant="secondary"
+                variant="primary"
                 size="lg"
                 onClick={() => setIsDonationModalOpen(true)}
               >
@@ -280,7 +299,6 @@ export default function Home() {
                 variant="outline"
                 size="lg"
                 href="/contact"
-                className="border-white text-white hover:bg-white hover:text-[#2F4F2F]"
               >
                 Get Involved
                 <ArrowRight size={20} />
