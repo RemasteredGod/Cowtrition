@@ -54,7 +54,7 @@ export default function ActivitiesPage() {
           <div className="absolute top-10 left-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#2F4F2F]/20 rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

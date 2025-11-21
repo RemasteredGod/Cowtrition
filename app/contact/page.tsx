@@ -23,7 +23,7 @@ export default function ContactPage() {
           <div className="absolute top-10 left-10 w-96 h-96 bg-[#D97706]/20 rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -93,7 +93,9 @@ export default function ContactPage() {
                     <Mail size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2F4F2F] mb-2 text-lg">Email</h3>
+                    <h3 className="font-semibold text-[#2F4F2F] mb-2 text-lg">
+                      Email
+                    </h3>
                     <a
                       href="mailto:Cowtrition2019@gmail.com"
                       className="text-[#2F4F2F]/70 hover:text-[#D97706] transition-colors"
@@ -114,7 +116,9 @@ export default function ContactPage() {
                     <Phone size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2F4F2F] mb-2 text-lg">Phone</h3>
+                    <h3 className="font-semibold text-[#2F4F2F] mb-2 text-lg">
+                      Phone
+                    </h3>
                     <a
                       href="tel:+919540845510"
                       className="text-[#2F4F2F]/70 hover:text-[#4D7C0F] transition-colors"
@@ -135,7 +139,9 @@ export default function ContactPage() {
                     <MapPin size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#2F4F2F] mb-2 text-lg">Address</h3>
+                    <h3 className="font-semibold text-[#2F4F2F] mb-2 text-lg">
+                      Address
+                    </h3>
                     <p className="text-[#2F4F2F]/70">
                       A-4, Lal Bagh
                       <br />
@@ -153,13 +159,31 @@ export default function ContactPage() {
 
               {/* Social Media Links */}
               <div>
-                <h3 className="font-semibold text-[#2F4F2F] mb-4 text-lg">Follow Us</h3>
+                <h3 className="font-semibold text-[#2F4F2F] mb-4 text-lg">
+                  Follow Us
+                </h3>
                 <div className="flex gap-4">
                   {[
-                    { icon: Facebook, url: 'https://www.facebook.com/cowtritionfoundation', label: 'Facebook' },
-                    { icon: Instagram, url: 'https://www.instagram.com/cowtritionfoundation', label: 'Instagram' },
-                    { icon: Youtube, url: 'https://www.youtube.com/@cowtritionfoundation', label: 'YouTube' },
-                    { icon: Linkedin, url: 'https://www.linkedin.com/company/cowtrition-foundation', label: 'LinkedIn' }
+                    {
+                      icon: Facebook,
+                      url: 'https://www.facebook.com/cowtritionfoundation',
+                      label: 'Facebook',
+                    },
+                    {
+                      icon: Instagram,
+                      url: 'https://www.instagram.com/cowtritionfoundation',
+                      label: 'Instagram',
+                    },
+                    {
+                      icon: Youtube,
+                      url: 'https://www.youtube.com/@cowtritionfoundation',
+                      label: 'YouTube',
+                    },
+                    {
+                      icon: Linkedin,
+                      url: 'https://www.linkedin.com/company/cowtrition-foundation',
+                      label: 'LinkedIn',
+                    },
                   ].map((social, index) => (
                     <motion.a
                       key={index}

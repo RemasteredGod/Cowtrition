@@ -20,7 +20,7 @@ export default function SupportPage() {
           <div className="absolute top-10 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#4D7C0F]/20 rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -65,9 +65,9 @@ export default function SupportPage() {
               Make a Difference
             </h2>
             <p className="text-base md:text-lg text-[#2F4F2F]/70 max-w-3xl mx-auto">
-              Join us in reviving indigenous dairy practices, empowering farmers, 
-              and building sustainable communities. Your support creates lasting impact 
-              for cows, farmers, and rural livelihoods.
+              Join us in reviving indigenous dairy practices, empowering
+              farmers, and building sustainable communities. Your support
+              creates lasting impact for cows, farmers, and rural livelihoods.
             </p>
           </motion.div>
 
@@ -76,33 +76,36 @@ export default function SupportPage() {
               {
                 icon: Heart,
                 title: 'Donate',
-                description: 'Support cow-care projects, farmer training programs, and natural nutrition initiatives. Your donation directly funds sustainable livelihoods.',
+                description:
+                  'Support cow-care projects, farmer training programs, and natural nutrition initiatives. Your donation directly funds sustainable livelihoods.',
                 action: () => setIsDonationModalOpen(true),
                 buttonText: 'Donate Now',
                 variant: 'primary',
                 color: 'bg-[#D97706]',
-                delay: 0
+                delay: 0,
               },
               {
                 icon: HandHeart,
                 title: 'Volunteer',
-                description: 'Join our team on the ground — in farming, education, awareness drives, or community outreach. Share your skills and passion with us.',
+                description:
+                  'Join our team on the ground — in farming, education, awareness drives, or community outreach. Share your skills and passion with us.',
                 action: '/contact',
                 buttonText: 'Join Us',
                 variant: 'secondary',
                 color: 'bg-[#4D7C0F]',
-                delay: 0.1
+                delay: 0.1,
               },
               {
                 icon: Users,
                 title: 'Sponsor a Project',
-                description: 'Sponsor cow-care programs, nutrition projects, or farmer empowerment initiatives. Receive updates and see your impact firsthand.',
+                description:
+                  'Sponsor cow-care programs, nutrition projects, or farmer empowerment initiatives. Receive updates and see your impact firsthand.',
                 action: '/contact',
                 buttonText: 'Learn More',
                 variant: 'outline',
                 color: 'bg-[#7A5C33]',
-                delay: 0.2
-              }
+                delay: 0.2,
+              },
             ].map((option, index) => (
               <motion.div
                 key={index}
@@ -112,17 +115,29 @@ export default function SupportPage() {
                 transition={{ delay: option.delay, duration: 0.6 }}
                 className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 ${option.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 ${option.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <option.icon size={32} className="text-white" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#2F4F2F] mb-4">{option.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-[#2F4F2F] mb-4">
+                  {option.title}
+                </h3>
                 <p className="text-[#2F4F2F]/70 mb-6 leading-relaxed">
                   {option.description}
                 </p>
                 <Button
                   variant={option.variant as any}
-                  onClick={typeof option.action === 'function' ? option.action : undefined}
-                  href={typeof option.action === 'string' ? option.action : undefined}
+                  onClick={
+                    typeof option.action === 'function'
+                      ? option.action
+                      : undefined
+                  }
+                  href={
+                    typeof option.action === 'string'
+                      ? option.action
+                      : undefined
+                  }
                 >
                   {option.buttonText}
                 </Button>
@@ -140,7 +155,7 @@ export default function SupportPage() {
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D97706]/20 rounded-full blur-3xl" />
-            
+
             <div className="relative z-10">
               <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6">
                 For Businesses
@@ -149,8 +164,9 @@ export default function SupportPage() {
                 Corporate Partnerships
               </h3>
               <p className="text-base md:text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-                Partner with us for CSR initiatives. We offer customized programs
-                for businesses committed to rural development and sustainability.
+                Partner with us for CSR initiatives. We offer customized
+                programs for businesses committed to rural development and
+                sustainability.
               </p>
               <Button variant="primary" size="lg" href="/contact">
                 Partner With Us

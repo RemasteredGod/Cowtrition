@@ -78,25 +78,33 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                   </p>
                   <div className="space-y-2">
                     <div>
-                      <p className="text-xs text-[#2F4F2F]/60 mb-1">Account Name</p>
+                      <p className="text-xs text-[#2F4F2F]/60 mb-1">
+                        Account Name
+                      </p>
                       <p className="font-medium text-[#2F4F2F]">
                         Cowtrition Foundation
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-[#2F4F2F]/60 mb-1">Account Number</p>
+                      <p className="text-xs text-[#2F4F2F]/60 mb-1">
+                        Account Number
+                      </p>
                       <p className="font-mono text-sm font-medium text-[#2F4F2F]">
                         3110201002681
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-[#2F4F2F]/60 mb-1">IFSC Code</p>
+                      <p className="text-xs text-[#2F4F2F]/60 mb-1">
+                        IFSC Code
+                      </p>
                       <p className="font-mono text-sm font-medium text-[#2F4F2F]">
                         CNRB0006458
                       </p>
                     </div>
                     <div>
-                      <p className="text-xs text-[#2F4F2F]/60 mb-1">Bank & Branch</p>
+                      <p className="text-xs text-[#2F4F2F]/60 mb-1">
+                        Bank & Branch
+                      </p>
                       <p className="font-medium text-[#2F4F2F]">
                         Canara Bank, Loni Ghaziabad, Uttar Pradesh
                       </p>

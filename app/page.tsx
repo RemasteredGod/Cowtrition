@@ -28,7 +28,10 @@ export default function Home() {
     { src: '/images/activities/farmer-training.jpg', alt: 'Farmer Training' },
     { src: '/images/activities/a2-milk.jpg', alt: 'A2 Milk Distribution' },
     { src: '/images/about/about-farming.jpg', alt: 'Traditional Farming' },
-    { src: '/images/activities/women-empowerment.jpg', alt: 'Women Empowerment' },
+    {
+      src: '/images/activities/women-empowerment.jpg',
+      alt: 'Women Empowerment',
+    },
   ];
 
   const nextImage = () => {
@@ -36,7 +39,7 @@ export default function Home() {
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => 
+    setCurrentImageIndex((prev) =>
       prev === 0 ? galleryImages.length - 1 : prev - 1
     );
   };
@@ -135,9 +138,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="text-lg md:text-xl text-[#2F4F2F]/80 leading-relaxed max-w-xl mx-auto lg:mx-0"
               >
-                We work to revive traditional knowledge, promote indigenous cow welfare, 
-                and bring natural, nutritious dairy & farm practices into mainstream health, 
-                agriculture, and livelihood systems.
+                We work to revive traditional knowledge, promote indigenous cow
+                welfare, and bring natural, nutritious dairy & farm practices
+                into mainstream health, agriculture, and livelihood systems.
               </motion.p>
 
               <motion.div
@@ -146,7 +149,12 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 1 }}
                 className="flex flex-wrap gap-3 justify-center lg:justify-start"
               >
-                {['Cow health', 'Farmer empowerment', 'Natural nutrition', 'Sustainable future'].map((tag, index) => (
+                {[
+                  'Cow health',
+                  'Farmer empowerment',
+                  'Natural nutrition',
+                  'Sustainable future',
+                ].map((tag, index) => (
                   <span
                     key={index}
                     className="px-4 py-2 bg-[#4D7C0F]/10 text-[#2F4F2F] rounded-full text-sm font-medium"
@@ -232,7 +240,9 @@ export default function Home() {
                 {/* Hover Text */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full">
-                    <p className="text-[#2F4F2F] font-semibold">Click to view gallery</p>
+                    <p className="text-[#2F4F2F] font-semibold">
+                      Click to view gallery
+                    </p>
                   </div>
                 </div>
               </div>

@@ -14,7 +14,7 @@ export default function AboutPage() {
           <div className="absolute top-10 left-10 w-96 h-96 bg-[#D97706]/20 rounded-full blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#FFF7E9]/10 rounded-full blur-3xl" />
         </div>
-        
+
         <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -67,24 +67,26 @@ export default function AboutPage() {
                 About Cowtrition Foundation
               </h2>
               <p className="text-base md:text-lg text-[#2F4F2F]/80 mb-4 leading-relaxed">
-                Cowtrition Foundation was born from a deep commitment to reviving 
-                cow-centric nutrition, indigenous dairy practices, natural farming, 
-                and rural livelihood empowerment. We believe that cows are not just 
-                animals — they are pillars of rural prosperity, soil health, 
-                ecological balance, and traditional wellness.
+                Cowtrition Foundation was born from a deep commitment to
+                reviving cow-centric nutrition, indigenous dairy practices,
+                natural farming, and rural livelihood empowerment. We believe
+                that cows are not just animals — they are pillars of rural
+                prosperity, soil health, ecological balance, and traditional
+                wellness.
               </p>
               <p className="text-base md:text-lg text-[#2F4F2F]/80 mb-4 leading-relaxed">
-                Our mission is to create wealth from waste, promote A2 milk and 
-                indigenous cow-based products, and integrate science with tradition. 
-                We support sustainable livelihoods for farmers while preserving 
-                cultural heritage and natural farming systems that have sustained 
-                India for millennia.
+                Our mission is to create wealth from waste, promote A2 milk and
+                indigenous cow-based products, and integrate science with
+                tradition. We support sustainable livelihoods for farmers while
+                preserving cultural heritage and natural farming systems that
+                have sustained India for millennia.
               </p>
               <p className="text-base md:text-lg text-[#2F4F2F]/80 leading-relaxed">
-                Through community education, farmer training, environmental conservation, 
-                and direct support programs, we&apos;re building a future where rural 
-                communities thrive, cows are respected as sacred partners in agriculture, 
-                and natural nutrition becomes accessible to all.
+                Through community education, farmer training, environmental
+                conservation, and direct support programs, we&apos;re building a
+                future where rural communities thrive, cows are respected as
+                sacred partners in agriculture, and natural nutrition becomes
+                accessible to all.
               </p>
             </motion.div>
 
@@ -142,21 +144,21 @@ export default function AboutPage() {
                 description:
                   'Promoting A2 milk, ghee, and indigenous dairy products that are naturally nutritious and support traditional wellness.',
                 icon: '🥛',
-                color: 'bg-[#D97706]'
+                color: 'bg-[#D97706]',
               },
               {
                 title: 'Natural Farming',
                 description:
                   'Teaching sustainable, organic farming that integrates cow-based composting, soil health, and ecological balance.',
                 icon: '🌱',
-                color: 'bg-[#4D7C0F]'
+                color: 'bg-[#4D7C0F]',
               },
               {
                 title: 'Rural Empowerment',
                 description:
                   'Creating economic opportunities for farmers through fair trade, training programs, and community-led development.',
                 icon: '🤝',
-                color: 'bg-[#7A5C33]'
+                color: 'bg-[#7A5C33]',
               },
             ].map((value, index) => (
               <motion.div
@@ -167,7 +169,9 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 ${value.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 ${value.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <span className="text-3xl">{value.icon}</span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-[#2F4F2F] mb-4">
