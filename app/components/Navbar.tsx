@@ -14,7 +14,6 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Vision', href: '/vision' },
-    { name: 'Our Team', href: '/team' },
     { name: 'Activities', href: '/activities' },
     { name: 'Support Us', href: '/support' },
     { name: 'Contact', href: '/contact' },
@@ -25,14 +24,14 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center py-2">
             <Image
               src="/images/logo/logo.png"
               alt="Cowtrition Foundation"
-              width={180}
-              height={60}
+              width={280}
+              height={80}
               priority
-              className="h-12 w-auto"
+              className="h-16 w-auto hover:scale-105 transition-transform duration-300"
             />
           </Link>
 

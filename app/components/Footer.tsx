@@ -38,14 +38,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/team"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/activities"
                   className="text-white/70 hover:text-white transition-colors"
                 >
