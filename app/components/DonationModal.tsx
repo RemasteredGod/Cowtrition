@@ -2,6 +2,7 @@
 
 import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -25,13 +26,13 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
           />
 
           {/* Modal */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden relative"
+              className="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden relative my-8 max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -43,45 +44,43 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
               </button>
 
               {/* Content */}
-              <div className="p-8 text-center">
-                <div className="w-16 h-16 bg-[#D97706] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">❤️</span>
+              <div className="p-6 sm:p-7 text-center overflow-y-auto max-h-[85vh]">
+                <div className="w-14 h-14 bg-[#D97706] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-2xl">❤️</span>
                 </div>
 
-                <h2 className="text-3xl font-bold text-[#2F4F2F] mb-3">
+                <h2 className="text-xl sm:text-2xl font-bold text-[#2F4F2F] mb-2">
                   Support Our Mission
                 </h2>
-                <p className="text-[#2F4F2F]/70 mb-6 leading-relaxed">
+                <p className="text-sm text-[#2F4F2F]/70 mb-5 leading-relaxed px-2">
                   Scan the QR code below to make a donation and help us preserve
                   India&apos;s sacred cows and empower rural farmers.
                 </p>
 
-                {/* QR Code Placeholder */}
-                <div className="bg-[#FFF7E9] rounded-2xl p-6 mb-6">
-                  <div className="aspect-square bg-white rounded-xl flex items-center justify-center border-2 border-[#4D7C0F]/20">
-                    <div className="text-center">
-                      <div className="text-6xl mb-3">📱</div>
-                      <p className="text-[#2F4F2F]/60 text-sm">
-                        Add your payment QR code here
-                      </p>
-                      <p className="text-[#2F4F2F]/40 text-xs mt-2">
-                        Replace with actual QR image
-                      </p>
-                    </div>
+                {/* QR Code */}
+                <div className="bg-[#FFF7E9] rounded-2xl p-4 mb-5">
+                  <div className="aspect-square bg-white rounded-xl flex items-center justify-center border-2 border-[#4D7C0F]/20 overflow-hidden max-w-xs mx-auto relative">
+                    <Image
+                      src="/qr-code.jpeg"
+                      alt="Payment QR Code"
+                      fill
+                      className="object-contain p-4"
+                      sizes="(max-width: 640px) 90vw, 400px"
+                    />
                   </div>
                 </div>
 
                 {/* Payment Info */}
-                <div className="bg-[#4D7C0F]/5 rounded-xl p-4 mb-4">
-                  <p className="text-sm text-[#2F4F2F]/70 mb-3 font-semibold">
+                <div className="bg-[#4D7C0F]/5 rounded-xl p-4 mb-4 text-left">
+                  <p className="text-xs sm:text-sm text-[#2F4F2F]/70 mb-3 font-semibold text-center">
                     Or transfer directly to:
                   </p>
-                  <div className="space-y-2">
+                  <div className="space-y-2 text-sm">
                     <div>
                       <p className="text-xs text-[#2F4F2F]/60 mb-1">
                         Account Name
                       </p>
-                      <p className="font-medium text-[#2F4F2F]">
+                      <p className="font-medium text-[#2F4F2F] text-sm sm:text-base">
                         Cowtrition Foundation
                       </p>
                     </div>
@@ -89,7 +88,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                       <p className="text-xs text-[#2F4F2F]/60 mb-1">
                         Account Number
                       </p>
-                      <p className="font-mono text-sm font-medium text-[#2F4F2F]">
+                      <p className="font-mono text-sm sm:text-base font-medium text-[#2F4F2F]">
                         3110201002681
                       </p>
                     </div>
@@ -97,7 +96,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                       <p className="text-xs text-[#2F4F2F]/60 mb-1">
                         IFSC Code
                       </p>
-                      <p className="font-mono text-sm font-medium text-[#2F4F2F]">
+                      <p className="font-mono text-sm sm:text-base font-medium text-[#2F4F2F]">
                         CNRB0006458
                       </p>
                     </div>
@@ -105,7 +104,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                       <p className="text-xs text-[#2F4F2F]/60 mb-1">
                         Bank & Branch
                       </p>
-                      <p className="font-medium text-[#2F4F2F]">
+                      <p className="font-medium text-[#2F4F2F] text-sm sm:text-base">
                         Canara Bank, Loni Ghaziabad, Uttar Pradesh
                       </p>
                     </div>
