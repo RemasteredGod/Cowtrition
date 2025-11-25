@@ -110,17 +110,6 @@ export default function Footer() {
                 &copy; {new Date().getFullYear()} Cowtrition Foundation. All
                 rights reserved. Made with ❤️ for rural India.
               </p>
-              <p className="mt-2">
-                Crafted with love by{' '}
-                <a
-                  href="https://www.linkedin.com/in/ashutosh-padhi/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#D97706] hover:text-[#F59E0B] transition-colors font-medium"
-                >
-                  Ashutosh Padhi
-                </a>
-              </p>
             </div>
 
             <div className="flex gap-4">
